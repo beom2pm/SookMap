@@ -10,6 +10,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk{
+            abiFilters 'armeabi-v7a'
+        }
     }
     buildTypes {
         release {
@@ -20,6 +23,7 @@ android {
 }
 allprojects{
     repositories {
+
         maven {url 'https://jitpack.io'}
     }
 }
@@ -38,4 +42,6 @@ dependencies {
     implementation 'org.altbeacon:android-beacon-library:2.+'
     implementation 'com.github.pedroSG94:AutoPermissions:1.0.3' // permission
     implementation 'com.android.support:localbroadcastmanager:28.0.0'
+    //unity project
+    implementation project(':androidTest_transfer')
 }

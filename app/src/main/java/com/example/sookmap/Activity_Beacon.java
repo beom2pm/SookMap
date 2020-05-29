@@ -3,6 +3,7 @@ package com.example.sookmap;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,12 +11,16 @@ import android.os.Message;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
@@ -30,6 +35,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import static com.example.sookmap.FragmentMap.beacon_flag;
+
 public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer {
     private BeaconManager beaconManager;
     private List<Beacon> beaconList = new ArrayList<>();
@@ -40,6 +47,25 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beacon);
+
+        //sqlite query test
+        String last_class="";
+        DatabaseManager databaseManager=DatabaseManager.getInstance(this);
+        TextView textView_test=(TextView)findViewById(R.id.sqlite_test);
+        String[] columns = new String[] {"minor_id","class_id","class_name"};
+        textView_test.setText("");
+        Cursor cursor=databaseManager.query(columns,null,null,null,null,null);
+        if(cursor !=null){
+            while (cursor.moveToNext()){
+                String beacon_id=cursor.getString(cursor.getColumnIndexOrThrow("minor_id"));
+                String class_id=cursor.getString(cursor.getColumnIndexOrThrow("class_id"));
+                String class_name=cursor.getString(cursor.getColumnIndexOrThrow("class_name"));
+                textView_test.append("minor:"+beacon_id+" class_id:"+class_id+" class_name:"+class_name+'\n');
+                System.out.println(beacon_id);
+                last_class=class_name;
+            }
+        }
+        //beacon
 
         beaconManager = BeaconManager.getInstanceForApplication(this);
         textView = (TextView)findViewById(R.id.textView_beacon);
@@ -62,6 +88,22 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
 
             }
             }
+        //activity to fragment 값 전달
+        FragmentMap fragmentMap = new FragmentMap();
+        Button btn_check=(Button)findViewById(R.id.check_btn);
+        final String finalLast_class = last_class;
+        btn_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentMap fragmentMap = new FragmentMap();
+                Bundle bundle= new Bundle(1);
+                bundle.putString("class_name", finalLast_class);
+                fragmentMap.setArguments(bundle);
+                beacon_flag=1;
+                replaceFragment(fragmentMap);
+            }
+        });
+
 
     }
     @Override
@@ -128,5 +170,12 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
             handler.sendEmptyMessageDelayed(0,1000);
         }
     };
+
+    public void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container,fragment);
+        fragmentTransaction.commit();
+    }
 
 }
