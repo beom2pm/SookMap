@@ -41,7 +41,6 @@
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:process=":unityplayer"
             android:screenOrientation="fullSensor" >
 
             <!--

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "29.0.1"
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.example.sookmap"
         minSdkVersion 28
@@ -44,4 +44,5 @@ dependencies {
     implementation 'com.android.support:localbroadcastmanager:28.0.0'
     //unity project
     implementation project(':androidTest_transfer')
+    //implementation project(':nav_test')
 }

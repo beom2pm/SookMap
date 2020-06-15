@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_Beacon"/>
-        <activity android:name=".Unity.UnityPlayerActivity"/>
+       <!-- <activity android:name=".Unity.UnityPlayerActivity"/>-->
 
     </application>
 

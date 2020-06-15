@@ -69,6 +69,9 @@
            android:layout_marginLeft="20dp"
            android:layout_marginTop="50dp"
            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
        <EditText
            android:id="@+id/edit_end"
            android:layout_width="wrap_content"
@@ -77,10 +80,35 @@
            android:layout_marginTop="10dp"
            android:layout_marginLeft="20dp"
            android:textSize="18dp"
-           android:ems="15"
+           android:ems="14"
+           android:layout_weight="3"
            android:hint="도착지를 입력하세요."
            android:paddingLeft="10dp"
            android:background="@drawable/edit_border"/>
+        <ImageButton
+            android:id="@+id/btn_search2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_search"
+            />
+        <ToggleButton
+            android:id="@+id/button_favorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/favorite_btn"
+            android:checked="false"
+            android:layout_below="@+id/id_user_item"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:textOff=""
+            android:textOn=""/>
+
+    </LinearLayout>
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="match_parent"

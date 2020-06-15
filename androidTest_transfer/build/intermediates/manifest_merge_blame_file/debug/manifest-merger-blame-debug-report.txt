@@ -23,40 +23,40 @@
 16-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:3:106-134
 17    <!-- <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28" /> -->
 18    <uses-feature android:glEsVersion="0x00020000" />
-18-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:21:3-52
-18-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:21:17-49
+18-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:15:3-52
+18-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:15:17-49
 19    <uses-feature
-19-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:22:3-83
+19-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:16:3-83
 20        android:name="android.hardware.vulkan"
-20-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:22:17-55
+20-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:16:17-55
 21        android:required="false" />
-21-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:22:56-80
+21-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:16:56-80
 22
 23    <uses-permission android:name="android.permission.INTERNET" />
-23-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:23:3-65
-23-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:23:20-62
+23-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:17:3-65
+23-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:17:20-62
 24
 25    <uses-feature
-25-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:24:3-88
+25-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:18:3-88
 26        android:name="android.hardware.touchscreen"
-26-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:24:17-60
+26-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:18:17-60
 27        android:required="false" />
-27-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:24:61-85
+27-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:18:61-85
 28    <uses-feature
-28-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:25:3-99
+28-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:19:3-99
 29        android:name="android.hardware.touchscreen.multitouch"
-29-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:25:17-71
+29-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:19:17-71
 30        android:required="false" />
-30-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:25:72-96
+30-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:19:72-96
 31    <uses-feature
-31-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:26:3-108
+31-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:20:3-108
 32        android:name="android.hardware.touchscreen.multitouch.distinct"
-32-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:26:17-80
+32-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:20:17-80
 33        android:required="false" />
-33-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:26:81-105
+33-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:20:81-105
 34
 35    <application
-35-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:4:3-19:17
+35-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:4:3-13:17
 36        android:banner="@drawable/app_banner"
 36-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:4:71-108
 37        android:isGame="true"
@@ -64,34 +64,32 @@
 38        android:label="@string/app_name" >
 38-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:4:16-48
 39        <activity
-39-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:5:5-18:16
+39-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:5:5-12:16
 40            android:name="com.Company.androidTest_cube.UnityPlayerActivity"
-40-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:11:9-72
+40-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:5:301-364
 41            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-41-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:10:9-190
+41-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:5:119-300
 42            android:label="@string/app_name"
-42-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:6:9-41
+42-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:5:15-47
 43            android:launchMode="singleTask"
-43-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:8:9-40
-44            android:process=":unityplayer"
-44-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:9:9-39
-45            android:screenOrientation="fullSensor" >
-45-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:7:9-47
-46
-47            <!--
-48      <intent-filter>
-49        <action android:name="android.intent.action.MAIN" />
-50        <category android:name="android.intent.category.LAUNCHER" />
-51        <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-52      </intent-filter>
-53            -->
-54            <meta-data
-54-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:17:7-82
-55                android:name="unityplayer.UnityActivity"
-55-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:17:18-58
-56                android:value="true" />
-56-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:17:59-79
-57        </activity>
-58    </application>
-59
-60</manifest>
+43-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:5:87-118
+44            android:screenOrientation="fullSensor" >
+44-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:5:48-86
+45
+46            <!--
+47      <intent-filter>
+48        <action android:name="android.intent.action.MAIN" />
+49        <category android:name="android.intent.category.LAUNCHER" />
+50        <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+51      </intent-filter>
+52            -->
+53            <meta-data
+53-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:11:7-82
+54                android:name="unityplayer.UnityActivity"
+54-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:11:18-58
+55                android:value="true" />
+55-->/Users/user/AndroidStudioProjects/sookmap/androidTest_transfer/src/main/AndroidManifest.xml:11:59-79
+56        </activity>
+57    </application>
+58
+59</manifest>

@@ -52,7 +52,7 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
         String last_class="";
         DatabaseManager databaseManager=DatabaseManager.getInstance(this);
         TextView textView_test=(TextView)findViewById(R.id.sqlite_test);
-        String[] columns = new String[] {"minor_id","class_id","class_name"};
+        String[] columns = new String[] {"minor_id","class_id","class_name","class_value"};
         textView_test.setText("");
         Cursor cursor=databaseManager.query(columns,null,null,null,null,null);
         if(cursor !=null){
@@ -60,9 +60,10 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
                 String beacon_id=cursor.getString(cursor.getColumnIndexOrThrow("minor_id"));
                 String class_id=cursor.getString(cursor.getColumnIndexOrThrow("class_id"));
                 String class_name=cursor.getString(cursor.getColumnIndexOrThrow("class_name"));
+                String class_value=cursor.getString(cursor.getColumnIndexOrThrow("class_value"));
                 textView_test.append("minor:"+beacon_id+" class_id:"+class_id+" class_name:"+class_name+'\n');
                 System.out.println(beacon_id);
-                last_class=class_name;
+                last_class=class_value;
             }
         }
         //beacon
@@ -87,7 +88,7 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
                 builder.show();
 
             }
-            }
+        }
         //activity to fragment 값 전달
         FragmentMap fragmentMap = new FragmentMap();
         Button btn_check=(Button)findViewById(R.id.check_btn);
@@ -97,7 +98,7 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
             public void onClick(View v) {
                 FragmentMap fragmentMap = new FragmentMap();
                 Bundle bundle= new Bundle(1);
-                bundle.putString("class_name", finalLast_class);
+                bundle.putString("class_value", finalLast_class);
                 fragmentMap.setArguments(bundle);
                 beacon_flag=1;
                 replaceFragment(fragmentMap);
