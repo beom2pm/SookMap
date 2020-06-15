@@ -23,7 +23,6 @@ public class FragmentFavorite extends Fragment {
     }
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,31 +32,29 @@ public class FragmentFavorite extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_favorites, container, false);
+        View view = inflater.inflate(R.layout.fragment_favorites, container, false);
 
         //adapter
         ArrayList<String> list = new ArrayList<>();
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, list);
         final ListView listView = (ListView) view.findViewById(R.id.favorite_listview);
-        listView.setAdapter(adapter);
-        list.add("확인");
-
 
         FavoriteDatabase databaseManager = FavoriteDatabase.getInstance(getActivity());
 
         String[] columns = new String[]{"class_name"};
         //String selection = "class_name" ;
         Cursor cursor = databaseManager.query(columns, null, null, null, null, null);
-        if(cursor !=null){
-            while (cursor.moveToNext()){
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
                 System.out.println("들어가긴");
-                String class_name=cursor.getString(cursor.getColumnIndexOrThrow("class_name"));
+                String class_name = cursor.getString(cursor.getColumnIndexOrThrow("class_name"));
                 list.add(class_name);
-                System.out.println("여히"+class_name);
+                System.out.println("여히" + class_name);
             }
-
+        }
+        FavoriteAdapter favoriteAdapter = new FavoriteAdapter(getActivity(),list);
+        listView.setAdapter(favoriteAdapter);
         // Inflate the layout for this fragment
         return view;
-    }
 
+    }
 }

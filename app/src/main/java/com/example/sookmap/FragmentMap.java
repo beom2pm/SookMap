@@ -196,6 +196,17 @@ public class FragmentMap extends Fragment {
             }
         });
 
+        //즐겨찾기에서 자동으로 도착지 설정
+        //Bundle bundle1 = getArguments();
+        String favorite_start="";
+        if (getArguments()!=null){
+            System.out.println("과연 즐겨찾기는");
+            favorite_start=getArguments().getString("favorite_start");
+            edt_start.setText(favorite_start);
+            System.out.println("즐겨찾기"+favorite_start);
+        }
+
+
         return view;
     }
 
