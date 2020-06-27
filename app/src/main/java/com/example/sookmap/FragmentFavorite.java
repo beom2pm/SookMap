@@ -41,7 +41,6 @@ public class FragmentFavorite extends Fragment {
         FavoriteDatabase databaseManager = FavoriteDatabase.getInstance(getActivity());
 
         String[] columns = new String[]{"class_name"};
-        //String selection = "class_name" ;
         Cursor cursor = databaseManager.query(columns, null, null, null, null, null);
         if (cursor != null) {
             while (cursor.moveToNext()) {

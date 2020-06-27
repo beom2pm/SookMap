@@ -45,17 +45,18 @@ public class FavoriteAdapter extends BaseAdapter {
         final TextView textView = view.findViewById(R.id.txt_favorite);
         textView.setText(data.get(position));
 
+        //출발지 버튼
         ImageButton btn_start = view.findViewById(R.id.btn_start);
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dialog_favoriteStart dialog_favoriteStart = new Dialog_favoriteStart();
                 String txt_favorite = "";
                 txt_favorite =textView.getText().toString();
-                final String txt_favoriteName="";
+                final String txt_favoriteName;
+                txt_favoriteName=txt_favorite;
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("도착지로 설정하시겠습니까?");
+                builder.setTitle("출발지로 설정하시겠습니까?");
                 builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -75,6 +76,41 @@ public class FavoriteAdapter extends BaseAdapter {
 
                 AlertDialog alertDialog=builder.create();
                 alertDialog.show();
+            }
+        });
+
+        //도착지 버튼
+        ImageButton btn_dest = view.findViewById(R.id.btn_dest);
+        btn_dest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String txt_favorite = "";
+                txt_favorite =textView.getText().toString();
+                final String txt_favoriteName;
+                txt_favoriteName=txt_favorite;
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("도착지로 설정하시겠습니까?");
+                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        FragmentMap fragmentMap = new FragmentMap();
+                        Bundle bundle= new Bundle(1);
+                        bundle.putString("favorite_dest", txt_favoriteName);
+                        fragmentMap.setArguments(bundle);
+                        ((MainActivity)MainActivity.mContext).replaceFragment(fragmentMap);
+                    }
+                });
+
+                AlertDialog alertDialog=builder.create();
+                alertDialog.show();
+
             }
         });
 

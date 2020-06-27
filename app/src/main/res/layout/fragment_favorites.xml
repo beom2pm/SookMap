@@ -9,10 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <TextView
+            android:text="즐겨찾기"
+            android:textSize="23dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     <ListView
         android:id="@+id/favorite_listview"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="13dp"
         android:layout_marginRight="13dp"
         android:layout_width="match_parent"

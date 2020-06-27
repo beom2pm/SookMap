@@ -1,5 +1,0 @@
-com.Company.androidTest_cube
-drawable app_banner
-drawable app_icon
-string app_name
-style UnityThemeSelector

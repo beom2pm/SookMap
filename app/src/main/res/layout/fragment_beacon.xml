@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentBeacon">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:gravity="center"
+       >
+
+        <Button
+            android:id="@+id/btn_beacon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="강의실 찾기"
+            android:textColor="#FFFFFF"
+            android:background="#81BEF7"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/textView_beacon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="40dp"
+            android:text="beacon_id"
+            android:textStyle="bold"
+            android:textSize="25dp"
+           />
+
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="확인"
+            android:textColor="#D81B60"
+            android:background=" "
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+</FrameLayout>

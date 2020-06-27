@@ -48,7 +48,7 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beacon);
 
-        //sqlite query test
+       /* //sqlite query test
         String last_class="";
         DatabaseManager databaseManager=DatabaseManager.getInstance(this);
         TextView textView_test=(TextView)findViewById(R.id.sqlite_test);
@@ -65,7 +65,7 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
                 System.out.println(beacon_id);
                 last_class=class_value;
             }
-        }
+        }*/
         //beacon
 
         beaconManager = BeaconManager.getInstanceForApplication(this);
@@ -89,7 +89,7 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
 
             }
         }
-        //activity to fragment 값 전달
+        /*//activity to fragment 값 전달
         FragmentMap fragmentMap = new FragmentMap();
         Button btn_check=(Button)findViewById(R.id.check_btn);
         final String finalLast_class = last_class;
@@ -103,7 +103,7 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
                 beacon_flag=1;
                 replaceFragment(fragmentMap);
             }
-        });
+        });*/
 
 
     }
@@ -115,12 +115,12 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
     @Override
     public void onBeaconServiceConnect() {
         beaconManager.removeAllMonitorNotifiers();
-        beaconManager.setRangeNotifier(new RangeNotifier() {
+        beaconManager.addRangeNotifier(new RangeNotifier() {
             //비콘이 감지되면 해당 함수가 호출됨 -> collection에는 감지된 비콘의 리스트가, region에는 비콘에 대응하는 객체가 들어옴
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
                 if(beacons.size()>0){
-                    Log.i(TAG,"The first beacon I see is about "+
+                    Log.i(TAG," The first beacon I see is about "+
                             "((Beacon)beacons.iterator().next()).getDistance()"+" meters away");
                     beaconList.clear();
                     for(Beacon beacon:beacons){
@@ -161,7 +161,7 @@ public class Activity_Beacon extends AppCompatActivity implements BeaconConsumer
     }
     Handler handler = new Handler(){
         public void handleMessage(Message msg){
-            textView.setText("");
+            textView.setText("beacon 뭐");
             //비콘 아이디와 거리를 측정해 textview에 붙임
             for(Beacon beacon:beaconList){
                 textView.append("ID:"+beacon.getId3()+"/ Distance:"+

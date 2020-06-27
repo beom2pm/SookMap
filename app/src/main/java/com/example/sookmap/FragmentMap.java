@@ -28,8 +28,6 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-
-import com.Company.androidTest_cube.UnityPlayerActivity;
 import com.google.android.material.chip.ChipGroup;
 import com.unity3d.player.UnityPlayer;
 
@@ -69,20 +67,6 @@ public class FragmentMap extends Fragment {
         //db 객체 얻어오기
         //DatabaseManager databaseManager=DatabaseManager.getInstance(getActivity());
 
-        String beacon_str = "";
-        if(beacon_flag==1) {
-            System.out.println("액티비티 몇번");
-            //beacon값 받아오기
-
-            Bundle bundle = getArguments();
-            if (bundle != null)
-                beacon_str = bundle.getString("class_value");
-            Log.d("activity to frag",beacon_str);
-        }
-
-        //select item을 settext하기
-        edt_start=view.findViewById(R.id.edit_start);
-        edt_end=view.findViewById(R.id.edit_end);
         //비콘 값 전달할때 사용하면 될듯
         /*if(flag_select!=0){
             //select item result 받아오기
@@ -96,9 +80,11 @@ public class FragmentMap extends Fragment {
 
         //unity project
 
-        mUnityPlayer = new UnityPlayer(getActivity());
+        //mUnityPlayer = new UnityPlayer(getActivity());
 
 
+        edt_start=view.findViewById(R.id.edit_start);
+        edt_end=view.findViewById(R.id.edit_end);
         //출발지 검색바
         ImageButton btn_start = view.findViewById(R.id.btn_search);
         final FragmentManager fm = getFragmentManager();
@@ -134,14 +120,15 @@ public class FragmentMap extends Fragment {
             }
         });
 
-
+        final FragmentBeacon fragmentBeacon = new FragmentBeacon();
         ImageButton btn_location = view.findViewById(R.id.btn_location);
         btn_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                fragmentBeacon.show(fm,"beacon_frag");
 
-                Intent intent1 = new Intent(getActivity(), Activity_Beacon.class);
-                startActivity(intent1);
+                //Intent intent1 = new Intent(getActivity(), Activity_Beacon.class);
+                //startActivity(intent1);
             }
         });
         String contents="success";
@@ -149,7 +136,7 @@ public class FragmentMap extends Fragment {
 
         Button btn_guide = view.findViewById(R.id.btn_guide);
         //final로 변환
-        final String finalBeacon_str = beacon_str;
+        //final String finalBeacon_str = beacon_str;
 
         btn_guide.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,8 +149,8 @@ public class FragmentMap extends Fragment {
                     System.out.println("여기다"+ select_start);
                 }
 
-                Intent intent_unity=new Intent(getActivity(), UnityPlayerActivity.class);
-                startActivity(intent_unity);
+                //Intent intent_unity=new Intent(getActivity(), UnityPlayerActivity.class);
+                //startActivity(intent_unity);
                 /*Handler handler = new Handler(){
                     @Override
                     public void handleMessage(Message msg) {
@@ -183,7 +170,7 @@ public class FragmentMap extends Fragment {
         //즐겨찾기 버튼
 
         final FavoriteDatabase databaseManager=FavoriteDatabase.getInstance(getActivity());
-        favoriteButton=(ToggleButton)view.findViewById(R.id.button_favorite);
+        favoriteButton=view.findViewById(R.id.button_favorite);
         favoriteButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -199,12 +186,15 @@ public class FragmentMap extends Fragment {
         //즐겨찾기에서 자동으로 도착지 설정
         //Bundle bundle1 = getArguments();
         String favorite_start="";
+        String favorite_dest="";
         if (getArguments()!=null){
-            System.out.println("과연 즐겨찾기는");
             favorite_start=getArguments().getString("favorite_start");
             edt_start.setText(favorite_start);
-            System.out.println("즐겨찾기"+favorite_start);
+            favorite_dest=getArguments().getString("favorite_dest");
+            edt_end.setText(favorite_dest);
         }
+
+
 
 
         return view;
