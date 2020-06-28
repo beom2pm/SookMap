@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="강의실 찾기"
+            android:fontFamily="@font/na"
             android:textColor="#FFFFFF"
             android:background="#81BEF7"
             android:textStyle="bold"
@@ -29,18 +30,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="40dp"
+            android:fontFamily="@font/na"
             android:text="beacon_id"
             android:textStyle="bold"
             android:textSize="25dp"
            />
-
         <Button
             android:id="@+id/btn_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="확인"
+            android:fontFamily="@font/na"
             android:textColor="#D81B60"
-            android:background=" "
+            android:background="#FFFFFF"
             android:textStyle="bold"
             />
     </LinearLayout>

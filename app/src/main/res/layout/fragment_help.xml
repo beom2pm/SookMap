@@ -4,8 +4,127 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ebf1f5"
     tools:context=".FragmentHelp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:text="도움말"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="@font/na"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_ar"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:text="길찾기/길안내 사용법\n"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="#91c5ed"
+                    android:fontFamily="@font/na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="1.출발지/도착지 직접 입력\n   텍스트 입력 후, 찾기 아이콘 클릭 -  다이얼로그 화면에서 출발지/도착지 선택\n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/na"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:text="2.출발지 비콘 인식\n   위치 인식 아이콘 클릭 -  현재 강의실 위치가 나타나면 '확인'버튼 클릭"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/na"
+                    android:textSize="15dp"/>
+        </LinearLayout>
 
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_facil"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:text="교내 시설 찾기\n"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="#91c5ed"
+                    android:fontFamily="@font/na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="1.이용시설 어쩌구\n  \n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/na"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_star"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:text="즐겨찾기 기능\n"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="#91c5ed"
+                    android:fontFamily="@font/na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="1. 즐겨찾기 추가 - 하트 버튼 클릭\n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/na"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:text="2.즐겨찾기 목록에서 출발지/도착지 설정\n   출발지/도착지 아이콘 선택 -  'OK'버튼을 클릭하면 자동으로 출발지/도착지에 입력"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/na"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

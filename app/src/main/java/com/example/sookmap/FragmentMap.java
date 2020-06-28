@@ -177,7 +177,7 @@ public class FragmentMap extends Fragment {
                 if(isChecked){
                     String search_value =edt_end.getText().toString();
                     databaseManager.insertColumn(search_value);
-                    Toast.makeText(getActivity(),search_value,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"즐겨찾기 등록",Toast.LENGTH_SHORT).show();
                 }
 
             }

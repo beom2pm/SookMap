@@ -3,6 +3,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#ebf1f5"
     >
 
     <ImageView
@@ -12,7 +13,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
         android:layout_weight="1"
-        android:background="@drawable/ic_full_heart"
+        android:background="@drawable/ic_blue_heart"
         />
     <TextView
         android:id="@+id/txt_favorite"
@@ -22,6 +23,7 @@
         android:layout_marginLeft="10dp"
         android:textSize="17dp"
         android:layout_weight="3"
+        android:fontFamily="@font/na"
         android:ems="10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

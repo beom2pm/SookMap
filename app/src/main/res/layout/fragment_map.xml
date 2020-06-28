@@ -8,13 +8,16 @@
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:orientation="vertical">
+       android:orientation="vertical"
+       android:background="#ebf1f5">
        <TextView
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="60dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="길찾기"
-            android:textSize="25dp"
+            android:text="길 찾기"
+            android:textSize="27dp"
+           android:textColor="#1d1f1e"
+           android:fontFamily="@font/na"
            android:textStyle="bold"
             android:gravity="center"
         />
@@ -23,8 +26,9 @@
            android:layout_height="wrap_content"
            android:text="출발지"
            android:textSize="20dp"
+           android:fontFamily="@font/na"
            android:layout_marginLeft="20dp"
-           android:layout_marginTop="100dp"
+           android:layout_marginTop="110dp"
            />
        <LinearLayout
            android:layout_width="match_parent"
@@ -33,6 +37,7 @@
            android:id="@+id/edit_start"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+           android:fontFamily="@font/na"
            android:inputType="text"
            android:layout_marginTop="10dp"
            android:layout_marginLeft="20dp"
@@ -66,8 +71,9 @@
            android:layout_height="wrap_content"
            android:text="도착지"
            android:textSize="20dp"
+           android:fontFamily="@font/na"
            android:layout_marginLeft="20dp"
-           android:layout_marginTop="50dp"
+           android:layout_marginTop="60dp"
            />
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,6 +83,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:inputType="text"
+           android:fontFamily="@font/na"
            android:layout_marginTop="10dp"
            android:layout_marginLeft="20dp"
            android:textSize="18dp"
@@ -102,8 +109,10 @@
             android:background="@drawable/favorite_btn"
             android:checked="false"
             android:layout_below="@+id/id_user_item"
-            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp"
             android:layout_alignParentRight="true"
             android:textOff=""
             android:textOn=""/>
@@ -120,10 +129,14 @@
            android:text="길안내 시작"
            android:textStyle="bold"
            android:textColor="#FFFFFF"
-           android:background="#bee6e8"
-           android:textSize="18dp"
+           android:background="@drawable/btn_guide"
+           android:textSize="20dp"
+           android:fontFamily="@font/na"
            android:layout_gravity="center"
-           android:layout_margin="40dp"
+           android:layout_marginTop="50dp"
+           android:layout_marginLeft="60dp"
+           android:layout_marginRight="60dp"
+           android:layout_marginBottom="30dp"
            android:padding="20dp"
            />
        </LinearLayout>
